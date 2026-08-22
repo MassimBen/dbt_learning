@@ -1,0 +1,55 @@
+==================== 2026-08-21T18:39:36.573921Z | 01a0259f-105b-7c32-8e6b-6f769305d46b ====================
+18:39:36.581365 [info ]: Installing dbt project and profile setup
+18:39:36.816770 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+18:39:36.828361 [info ]: Success Project created successfully!
+18:39:36.835442 [info ]: Info Project name: jaffle_shop
+18:39:36.836141 [info ]: Info Project directory: jaffle_shop
+18:39:36.838327 [info ]: Info Setting up your profile...
+18:39:36.844780 [info ]: Info Creating new profile...
+18:52:41.357704 [info ]: Success Profile written to C:\Users\massi\.dbt\profiles.yml
+18:52:41.360256 [info ]: Validating profile inputs, adapters, and connection
+
+18:52:41.361764 [info ]: dbt-fusion 2.0.0-preview.212
+18:52:41.370913 [info ]: Started loading project
+18:52:41.430886 [info ]: Loading ~/.dbt/profiles.yml
+18:52:41.454538 [info ]: Finished loading project [  0.08s]
+18:52:41.460361 [info ]: Started debugging
+18:52:41.461512 [info ]: Debugging profile: dev
+18:52:41.462091 [info ]: Debugging dbt version: 2.0.0-preview.212
+18:52:41.462825 [info ]: Debugging platform: windows x86_64 (windows)
+18:52:41.464345 [info ]: Debugging adapter type: bigquery (remote)
+18:52:41.605579 [info ]: Debugging dependencies:
+  git: OK
+18:52:41.611946 [info ]: Debugging connection:
+  "database": "project-03262434-f852-4c90-b66",
+  "schema": "dbt_dev",
+  "method": "service-account",
+  "location": "US",
+  "dataproc_batch": null
+18:52:41.626189 [info ]: Finished debugging [  0.17s]
+18:52:41.630233 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the specified database.
+The following error was returned:
+
+Configuration Error: Keyfile 'C:\Users\massi> C:\Users\massi\AppData\Roaming\gcloud\project-03262434-f852-4c90-b66-cb51632bb830.json' does not exist
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+18:52:42.214796 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [13m 6s]
+==================== 2026-08-21T18:53:26.052235Z | 01a025ab-b89b-7332-a039-64f78d4fae19 ====================
+18:53:26.053798 [info ]: Installing dbt project and profile setup
+18:53:26.065440 [info ]: Warning Directory 'jaffle_shop' already exists, using 'jaffle_shop_1' instead
+18:53:26.150095 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+18:53:26.151495 [info ]: Success Project created successfully!
+18:53:26.152340 [info ]: Info Project name: jaffle_shop_1
+18:53:26.153202 [info ]: Info Project directory: jaffle_shop_1
+{"data":{"log_version":3,"version":"=2.0.0-preview.205"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"01a029c3-7611-7a41-9de9-aa2a2c82b1f4","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.205","name":"MainReportVersion","pid":28708,"thread":"tokio-rt-worker","ts":"2026-08-22T13:57:50.788677Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"C:\\Users\\massi\\.local\\bin\\dbt.exe license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"01a029c3-7611-7a41-9de9-aa2a2c82b1f4","level":"debug","msg":"running dbt-fusion with arguments {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false,\"manage_state\":false}","name":"MainReportArgs","pid":28708,"thread":"tokio-rt-worker","ts":"2026-08-22T13:57:50.789219Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"01a029c3-7611-7a41-9de9-aa2a2c82b1f4","level":"debug","msg":"No platform credentials found, skipping remote license","name":"Generic","pid":28708,"thread":"tokio-rt-worker","ts":"2026-08-22T13:57:50.899374Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"01a029c3-7611-7a41-9de9-aa2a2c82b1f4","level":"debug","msg":"License from file C:\\Users\\massi\\.dbt\\license.trial is in refresh window, attempting remote refresh","name":"Generic","pid":28708,"thread":"tokio-rt-worker","ts":"2026-08-22T13:57:55.030509Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"01a029c3-7611-7a41-9de9-aa2a2c82b1f4","level":"debug","msg":"Requesting trial license from https://cloud.getdbt.com/api/private/trial-licenses/","name":"Generic","pid":28708,"thread":"main","ts":"2026-08-22T13:57:56.017314Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"01a029c3-7611-7a41-9de9-aa2a2c82b1f4","level":"debug","msg":"Trial license retrieved","name":"Generic","pid":28708,"thread":"main","ts":"2026-08-22T13:57:56.368258Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"01a029c3-7611-7a41-9de9-aa2a2c82b1f4","level":"debug","msg":"License loaded from trial license server","name":"Generic","pid":28708,"thread":"tokio-rt-worker","ts":"2026-08-22T13:57:57.541667Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": [\n    \"compare\",\n    \"strict-static-analysis\"\n  ],\n  \"issued_at\": \"2026-08-22T13:57:56+00:00\",\n  \"expires_at\": \"2026-09-04T19:06:08+00:00\",\n  \"license_type\": \"trial\",\n  \"machine_id\": \"2fe8fd6ce91b8ad2ee96e3165f68e87b80d3f823441582539919c2f987be2c7b\",\n  \"days_remaining\": 13,\n  \"trial_start_date\": \"2026-08-21T19:06:08+00:00\"\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"01a029c3-7611-7a41-9de9-aa2a2c82b1f4","level":"info","msg":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": [\n    \"compare\",\n    \"strict-static-analysis\"\n  ],\n  \"issued_at\": \"2026-08-22T13:57:56+00:00\",\n  \"expires_at\": \"2026-09-04T19:06:08+00:00\",\n  \"license_type\": \"trial\",\n  \"machine_id\": \"2fe8fd6ce91b8ad2ee96e3165f68e87b80d3f823441582539919c2f987be2c7b\",\n  \"days_remaining\": 13,\n  \"trial_start_date\": \"2026-08-21T19:06:08+00:00\"\n}","name":"ShowNode","pid":28708,"thread":"tokio-rt-worker","ts":"2026-08-22T13:57:58.490418Z"}}
+{"data":{"completed_at":"2026-08-22T13:57:58.528092Z","elapsed":7.750997066497803,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"01a029c3-7611-7a41-9de9-aa2a2c82b1f4","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [7.8s]","name":"CommandCompleted","pid":28708,"thread":"tokio-rt-worker","ts":"2026-08-22T13:57:58.531721Z"}}
