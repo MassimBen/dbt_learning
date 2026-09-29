@@ -9,10 +9,10 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
-seeds:
+#seeds:
   # Builds seeds into '<your_schema_name>_raw'
-  jaffle_shop:
-    +schema: raw
+  #jaffle_shop:
+    #+schema: raw
 
 models:
   jaffle_shop:

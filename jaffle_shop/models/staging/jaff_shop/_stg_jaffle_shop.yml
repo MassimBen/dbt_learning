@@ -1,27 +1,21 @@
 models:
- - name : stg_jaffle_shop__customers
-   columns:
-     - name : customer_id
-       data_tests:
-         - unique
-         - not_null
-  
- - name : stg_jaffle_shop__orders
-   columns:
-     - name : order_id
-       data_tests:
-         - unique
-         - not_null
-     - name : status 
-       data_tests :
-         - accepted_values :
-             arguments :
-               values : ['placed','shipped','completed','returned','return_pending']
-     - name : customer_id
-       data_tests :
-          - relationships :
-              arguments :
-                to : ref('stg_jaffle_shop__customers')
-                field : customer_id
-
-     
+   - name: stg_jaffle_shop__orders
+     description: Staged orders data from our jaffle shop app.
+     columns:
+      - name: order_id
+        description: The primary key for orders.
+        data_tests:
+          - unique
+          - not_null
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
+      - name: customer_id
+        description: Testing the relationship with the customer_id column of the customers table.
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_jaffle_shop__customers')
+                field: customer_id
